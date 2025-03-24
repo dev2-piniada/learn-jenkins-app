@@ -12,7 +12,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Jenkins on Udemy deploy now
+          Learn Jenkins on Udemy deploy now Check out polling
         </a>
       </header>
       <p>
