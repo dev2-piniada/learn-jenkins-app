@@ -35,8 +35,7 @@ pipeline {
                     node --version
                     npm --version
                     npm ci
-                    npm install -g serve
-                    serve -s build
+                    node_modules/.bin/serve -s build
                     npx playwright test
                 '''
             }
