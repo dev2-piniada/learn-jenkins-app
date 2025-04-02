@@ -4,6 +4,7 @@ pipeline {
     environment {
         NETLIFY_SITE_ID = '7257c559-8b50-4ba1-84f7-914bfdf211c8'
         NETLIFY_AUTH_TOKEN = credentials('NETLIFY_TOKEN')
+        REACT_APP_VERSION = 1.1.0
     }
 
     stages {
@@ -109,13 +110,16 @@ pipeline {
             }
         }
 
+        /*
+        commented manual approval for continuous deployment
+
         stage('Approval') {
             steps {
                 timeout(time: 15, unit: 'MINUTES') {
                     input message: 'Do you wish to deploy to production?', ok: 'Yes, I am sure!'
                 }
             }
-        }
+        } */
 
         stage('Deploy Production & E2E') {
             agent {
